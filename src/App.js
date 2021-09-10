@@ -1,10 +1,10 @@
+import { Fragment } from 'react';
+import Header from './components/Header';
 
-function App() {
-    return (
-        <div>
-            <h1>Hola mundo</h1>
-        </div>
-    )
-}
+const App = () => (
+    <Fragment>
+        <Header/>
+    </Fragment>
+);
 
 export default App;
