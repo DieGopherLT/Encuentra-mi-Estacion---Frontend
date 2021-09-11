@@ -34,12 +34,28 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    @media(min-width: 768px) {
+        padding: 1rem;
+    }
 `;
 
 const SelectContainers = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    
+    @media(min-width: 768px) {
+        width: 70%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    @media(min-width: 1024px) {
+        width: 50%;
+    }
 `;
 
 const SubmitButton = styled(Button)`
@@ -49,6 +65,10 @@ const SubmitButton = styled(Button)`
         background-color: #007500;
     }
     @media(min-width: 768px) {
+        width: 30rem;
+    }
+    
+    @media(min-width: 1024px) {
         width: 20rem;
     }
 `;
