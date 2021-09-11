@@ -2,8 +2,25 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const SelectInput = ({ value, name, onChange }) => {
+
+    const translatedName = () => {
+        let translation = '';
+        switch(name) {
+            case 'origin':
+                translation = 'origen';
+                break;
+            case 'destiny':
+                translation = 'destino';
+                break;
+            default:
+                return name;
+        }
+        return translation;
+    }
+
     return (
         <Container>
+            <Label>{ translatedName() }</Label>
             <Select
                 value={ value }
                 name={ name }
@@ -25,10 +42,17 @@ const Container = styled.div`
     &::after {
         content: "\\25b6";
         position: absolute;
-        top: 2.5rem;
+        top: 4.25rem;
         right: 1rem;
         transform: rotate(90deg);
     }
+`;
+
+const Label = styled.label`
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    text-align: center;
+    display: block;
 `;
 
 const Select = styled.select`
