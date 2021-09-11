@@ -4,20 +4,35 @@ import styled from '@emotion/styled';
 import SelectInput from './SelectInput';
 import Button from '../Button';
 
+import useForm from '../../hooks/useForm';
+
 const Form = () => {
+
+    const { form, onChangeHandler } = useForm({
+        origin: '',
+        destiny: '',
+    });
 
     const onSubmitHandler = event => {
         event.preventDefault();
         console.log('Submitted!');
-    }
+    };
 
     return (
         <StyledForm
             onSubmit={ onSubmitHandler }
         >
             <SelectContainers>
-                <SelectInput/>
-                <SelectInput/>
+                <SelectInput
+                    value={ form.origin }
+                    name="origin"
+                    onChange={ onChangeHandler }
+                />
+                <SelectInput
+                    value={ form.destiny }
+                    name="destiny"
+                    onChange={ onChangeHandler }
+                />
             </SelectContainers>
             <SubmitButton
                 type="submit"
@@ -34,8 +49,8 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    @media(min-width: 768px) {
+
+    @media (min-width: 768px) {
         padding: 1rem;
     }
 `;
@@ -44,16 +59,16 @@ const SelectContainers = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    
-    @media(min-width: 768px) {
+
+    @media (min-width: 768px) {
         width: 70%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-    
-    @media(min-width: 1024px) {
+
+    @media (min-width: 1024px) {
         width: 50%;
     }
 `;
@@ -61,14 +76,16 @@ const SelectContainers = styled.div`
 const SubmitButton = styled(Button)`
     margin-top: 1rem;
     background-color: #00D100;
+
     &:hover {
         background-color: #007500;
     }
-    @media(min-width: 768px) {
+
+    @media (min-width: 768px) {
         width: 30rem;
     }
-    
-    @media(min-width: 1024px) {
+
+    @media (min-width: 1024px) {
         width: 20rem;
     }
 `;

@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const SelectInput = () => {
+const SelectInput = ({ value, name, onChange }) => {
     return (
         <Container>
-            <Select>
+            <Select
+                value={ value }
+                name={ name }
+                onChange={ onChange }
+            >
                 <Option value="1">1</Option>
                 <Option value="2">2</Option>
                 <Option value="3">3</Option>
@@ -17,7 +21,7 @@ const SelectInput = () => {
 
 const Container = styled.div`
     position: relative;
-    
+
     &::after {
         content: "\\25b6";
         position: absolute;
