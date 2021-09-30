@@ -44,14 +44,14 @@ const Form = () => {
 };
 
 const StyledForm = styled.form`
-    margin-top: 1rem;
-    padding: 2rem;
+    margin-top: 0.625rem;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media (min-width: 768px) {
-        padding: 1rem;
+        padding: 0.625rem;
     }
 `;
 
@@ -65,7 +65,7 @@ const SelectContainers = styled.div`
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 0.625rem;
     }
 
     @media (min-width: 1024px) {
@@ -74,7 +74,7 @@ const SelectContainers = styled.div`
 `;
 
 const SubmitButton = styled(Button)`
-    margin-top: 1rem;
+    margin-top: 0.625rem;
     background-color: #00D100;
 
     &:hover {
@@ -82,11 +82,11 @@ const SubmitButton = styled(Button)`
     }
 
     @media (min-width: 768px) {
-        width: 30rem;
+        width: 18.75rem;
     }
 
     @media (min-width: 1024px) {
-        width: 20rem;
+        width: 12.5rem;
     }
 `;
 

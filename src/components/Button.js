@@ -15,9 +15,9 @@ const Button = (props) => {
 
 const StyledButton = styled.button`
     width: 100%;
-    padding: 1rem 3rem;
-    font-size: 1.6rem;
-    border-radius: 1rem;
+    padding: 0.625rem 1.875rem;
+    font-size: 1rem;
+    border-radius: 0.625rem;
     border: none;
     color: white;
     transition: background-color .3s ease;

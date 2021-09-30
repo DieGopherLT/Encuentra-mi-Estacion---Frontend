@@ -11,14 +11,14 @@ const Header = () => {
 
 const HeaderContainer = styled.header`
     background-color: #71bbd4;
-    padding: 1rem 0;
+    padding: 0.625rem 0;
 `;
 
 const HeaderParagraph = styled.p`
     color: white;
     margin: 0;
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 1.75rem;
 `;
 
 export default Header;
