@@ -7,8 +7,8 @@ import Form from './components/Form/Form';
 const App = () => {
 
     const html = '<strong>Encuentra mi Estación</strong> es una aplicación que le ayudará a llegar a su destino mediante' +
-        'el tren ligero, solo ingrese la estación donde se encuentre o vaya a ir, la estación a la que quiera llegar y' +
-        'nosotros le diremos cual es la mejor forma de ayudar';
+        ' el tren ligero, solo ingrese la estación donde se encuentre o vaya a ir, la estación a la que quiera llegar y' +
+        ' nosotros le diremos cual es la mejor forma de llegar a donde desea.';
 
     useEffect(() => {
         const welcomeModal = async () => {
