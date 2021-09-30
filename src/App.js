@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 
 import Header from './components/Header';
 import Form from './components/Form/Form';
+import Map from './components/Map/Map';
 
 const App = () => {
 
@@ -17,11 +18,11 @@ const App = () => {
                 await Swal.fire({
                     title: '¡Bienvenido a Encuentra mi Estación!',
                     html,
-                    confirmButtonText: 'Entendido'
+                    confirmButtonText: 'Entendido',
                 });
                 localStorage.setItem('visited', 'true');
             }
-        }
+        };
         welcomeModal();
     }, []);
 
@@ -29,6 +30,7 @@ const App = () => {
         <Fragment>
             <Header/>
             <Form/>
+            <Map/>
         </Fragment>
     );
 };
