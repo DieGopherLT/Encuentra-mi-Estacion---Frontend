@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import Header from './components/Header';
 import Form from './components/Form/Form';
 import Map from './components/Map/Map';
+import Summary from './components/Summary/Summary';
 
 const App = () => {
 
@@ -31,6 +32,7 @@ const App = () => {
             <Header/>
             <Form/>
             <Map/>
+            <Summary/>
         </Fragment>
     );
 };
