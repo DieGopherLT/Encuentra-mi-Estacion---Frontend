@@ -4,6 +4,6 @@
 
 ### Equipo 5, integrantes:
 
--Diego López Torres
--Kevin Hérnandez León
--Fernando Daniel Vera Meza
+- Diego López Torres
+- Kevin Hérnandez León
+- Fernando Daniel Vera Meza
