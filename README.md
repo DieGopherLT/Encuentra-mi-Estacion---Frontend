@@ -1,6 +1,6 @@
 # Encuentra Mi Estación - Frontend
 
-## Ingeniería de Sfotware 1 - Proyecto
+## Ingeniería de Software 1 - Proyecto
 
 ### Equipo 5, integrantes:
 
