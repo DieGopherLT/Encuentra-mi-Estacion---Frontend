@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const SelectInput = ({ value, name, onChange }) => {
+const StationSelect = ({ value, options, name, onChange }) => {
 
     const translatedName = () => {
         let translation = '';
@@ -26,11 +26,10 @@ const SelectInput = ({ value, name, onChange }) => {
                 name={ name }
                 onChange={ onChange }
             >
-                <Option value="1">1</Option>
-                <Option value="2">2</Option>
-                <Option value="3">3</Option>
-                <Option value="4">4</Option>
-                <Option value="5">5</Option>
+                <Option value="0">-- Selecciona una estación --</Option>
+                { options.map(option => (
+                    <Option key={ option.id } value={ option.id }>{ option.name }</Option>
+                )) }
             </Select>
         </Container>
     );
@@ -70,4 +69,4 @@ const Option = styled.option`
     height: 2.5rem;
 `;
 
-export default SelectInput;
+export default StationSelect;
