@@ -1,4 +1,5 @@
-# Encuentra Mi Estación - Frontend
+# ⚠️TRABAJO EN PROGRESO⚠️
+## Encuentra Mi Estación - Frontend
 
 Proyecto para la asignatura de Ingeniería de software 1
 
