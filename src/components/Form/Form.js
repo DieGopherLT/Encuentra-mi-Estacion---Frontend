@@ -9,7 +9,7 @@ import Button from '../Button';
 
 import useForm from '../../hooks/useForm';
 
-const Form = () => {
+const Form = ({ setPath, setAnimatingMap }) => {
 
     const { form, onChangeHandler } = useForm({
         origin: '',
@@ -26,6 +26,16 @@ const Form = () => {
 
     const onSubmitHandler = event => {
         event.preventDefault();
+
+        if (Object.values(form).some(field => field === '')) {
+            Swal.fire(
+                'Origen y destino son obligatorios',
+                'Por favor, elija una estación origen y destino.',
+                'error'
+            );
+            return;
+        }
+
         if (form.origin === form.destiny) {
             Swal.fire(
                 'Estación origen y destino son las mismas',
@@ -34,7 +44,11 @@ const Form = () => {
             );
             return;
         }
-        console.log('submiting...');
+        AxiosClient.post('/station', { origin: form.origin, destiny: form.destiny })
+            .then(response => {
+                setPath(response.data.path);
+                setAnimatingMap(true);
+            });
     };
 
     return (
