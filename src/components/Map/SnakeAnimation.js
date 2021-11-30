@@ -31,6 +31,7 @@ const SnakeAnimation = ({ animatingMap, path, setAnimatingMap }) => {
         map.addLayer(route.current);
         route.current.snakeIn();
         setAnimatingMap(false);
+    //eslint-disable-next-line
     }, [animatingMap]);
 
     return null;

@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import Header from './components/Header';
 import Form from './components/Form/Form';
 import Map from './components/Map/Map';
-import Summary from './components/Summary/Summary';
+// import Summary from './components/Summary/Summary';
 
 const html = '<strong>Encuentra mi Estación</strong> es una aplicación que le ayudará a llegar a su destino mediante' +
     ' el tren ligero, solo ingrese la estación donde se encuentre o vaya a ir, la estación a la que quiera llegar y' +
