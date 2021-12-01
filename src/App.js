@@ -1,10 +1,12 @@
-import { Fragment, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import styled from '@emotion/styled';
 import Swal from 'sweetalert2';
 
 import Header from './components/Header';
 import Form from './components/Form/Form';
 import Map from './components/Map/Map';
 // import Summary from './components/Summary/Summary';
+import Footer from './components/Footer';
 
 const html = '<strong>Encuentra mi Estación</strong> es una aplicación que le ayudará a llegar a su destino mediante' +
     ' el tren ligero, solo ingrese la estación donde se encuentre o vaya a ir, la estación a la que quiera llegar y' +
@@ -31,13 +33,26 @@ const App = () => {
     }, []);
 
     return (
-        <Fragment>
+        <AppContainer>
             <Header/>
-            <Form setPath={ setPath } setAnimatingMap={ setAnimatingMap } />
-            <Map animatingMap={ animatingMap } path={ path } setAnimatingMap={ setAnimatingMap } />
-            {/*<Summary/>*/}
-        </Fragment>
+            <MainContent>
+                <Form setPath={ setPath } setAnimatingMap={ setAnimatingMap } />
+                <Map animatingMap={ animatingMap } path={ path } setAnimatingMap={ setAnimatingMap } />
+                {/*<Summary/>*/}
+            </MainContent>
+            <Footer />
+        </AppContainer>
     );
 };
+
+const AppContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+`;
+
+const MainContent = styled.main`
+    flex: 1;
+`;
 
 export default App;
