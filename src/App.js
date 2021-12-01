@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import Header from './components/Header';
 import Form from './components/Form/Form';
 import Map from './components/Map/Map';
-// import Summary from './components/Summary/Summary';
+import Summary from './components/Summary/Summary';
 import Footer from './components/Footer';
 
 const html = '<strong>Encuentra mi Estación</strong> es una aplicación que le ayudará a llegar a su destino mediante' +
@@ -38,7 +38,7 @@ const App = () => {
             <MainContent>
                 <Form setPath={ setPath } setAnimatingMap={ setAnimatingMap } />
                 <Map animatingMap={ animatingMap } path={ path } setAnimatingMap={ setAnimatingMap } />
-                {/*<Summary/>*/}
+                <Summary path={ path } />
             </MainContent>
             <Footer />
         </AppContainer>
