@@ -20,7 +20,7 @@ const Form = ({ setPath, setAnimatingMap }) => {
     useEffect(() => {
         AxiosClient.get('/station')
             .then(result => {
-                setStations(result.data.stations);
+                setStations(result.data.stations.sort((a, b) => a.name.localeCompare(b.name)));
             });
     }, []);
 
@@ -44,6 +44,7 @@ const Form = ({ setPath, setAnimatingMap }) => {
             );
             return;
         }
+
         AxiosClient.post('/station', { origin: form.origin, destiny: form.destiny })
             .then(response => {
                 setPath(response.data.path);

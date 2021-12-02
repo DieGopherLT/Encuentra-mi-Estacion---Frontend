@@ -3,14 +3,19 @@ import styled from '@emotion/styled';
 
 import SummaryItem from './SummaryItem';
 
-const Summary = () => {
+const Summary = ({ path }) => {
+
+    const points = [];
+    for (let i = 0; i < path.length - 1; i++) {
+        const originName = path[i].name;
+        const destinationName = path[i+1].name;
+        points.push(<SummaryItem key={ i } origin={ originName } destination={ destinationName } />);
+    }
+
     return (
         <SummaryContainer>
             <SummaryTitle>Resumen de ruta</SummaryTitle>
-            <SummaryItem/>
-            <SummaryItem/>
-            <SummaryItem/>
-            <SummaryItem/>
+            { points }
         </SummaryContainer>
     );
 };
